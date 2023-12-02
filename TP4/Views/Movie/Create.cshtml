@@ -1,0 +1,60 @@
+﻿@model TP4.Models.Movie
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Movie</h4>
+<hr
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+
+<div class="col" style="margin:0% 7% 7%">
+    <form asp-action="CreateMovie" asp-controller="Movie" method="post" enctype="multipart/form-data">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="row form-group" style="background-color:lightgrey">
+            <label asp-for="Name" class="col-lg-2 control-label"></label>
+            <input asp-for="Name" class="col form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="row form-group">
+            <label asp-for="MovieAdded" class="col-lg-2 control-label"></label>
+            <input asp-for="MovieAdded" class="col form-control" />
+            <span asp-validation-for="MovieAdded" class="text-danger"></span>
+        </div>
+
+        <div class="row form-group" style="background-color:lightgrey">
+            <label asp-for="ImageFile" class="col-lg-2 control-label"></label>
+            <input type="file" asp-for="ImageFile" class="col form-control" />
+            <span asp-validation-for="ImageFile" class="text-danger"></span>
+        </div>
+
+        <div class="row form-group">
+            <input type="submit" value="Save Infos" class="col-lg-2 btn btn-primary" />
+            <span class="col"></span>
+        </div>
+
+        <div class="row form-group" style="background-color:lightgrey">
+            <a asp-action="Index" class="col-lg-2 btn btn-success" style="text-decoration: none;">Back to List</a>
+            <span class="col"></span>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

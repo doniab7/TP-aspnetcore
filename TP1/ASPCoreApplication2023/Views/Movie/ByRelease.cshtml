@@ -1,0 +1,20 @@
+﻿<h2>Movies released in @ViewBag.Month, @ViewBag.Year</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Release Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.ReleaseDate.ToShortDateString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+

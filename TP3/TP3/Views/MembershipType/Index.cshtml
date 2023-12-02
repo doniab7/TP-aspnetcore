@@ -1,0 +1,35 @@
+﻿@model List<TP3.Models.MembershipType>
+
+<h2>MembershipType Index</h2>
+
+<p>
+    <a asp-action="Create">Create New MembershipType</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>MembershipType ID</th>
+            <th>Sign Up Fee</th>
+            <th>Duration (Months)</th>
+            <th>Discount Rate</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var membershipType in Model)
+        {
+            <tr>
+                <td>@membershipType.Id</td>
+                <td>@membershipType.SignUpFee</td>
+                <td>@membershipType.DurationInMonth</td>
+                <td>@membershipType.DiscountRate</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@membershipType.Id">Details</a> |
+                    <a asp-action="Edit" asp-route-id="@membershipType.Id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@membershipType.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

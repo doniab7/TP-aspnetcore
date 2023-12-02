@@ -1,0 +1,10 @@
+﻿@model IEnumerable<TP5.ApplicationUser>
+@{
+    ViewData["Title"] = "UserManagement";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>UserManagement</h1>
+@foreach (var item in Model)
+{
+    <h4>@item.Email</h4>
+}

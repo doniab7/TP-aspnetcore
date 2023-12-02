@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "84ca0bcd-082c-49cb-aa77-ea2f1f5f8285",
+    "GenreName": "GenreFromJsonFile1"
+  },
+  {
+    "Id": "79e6f638-d7e7-4f63-8365-f172cb925381",
+    "GenreName": "GenreFromJsonFile2"
+  }
+]

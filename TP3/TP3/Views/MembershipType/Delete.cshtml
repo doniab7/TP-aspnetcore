@@ -1,0 +1,31 @@
+﻿@model TP3.Models.MembershipType
+
+<h2>Delete MembershipType</h2>
+
+<h3>Are you sure you want to delete this membership type?</h3>
+<div>
+    <h4>MembershipType Details</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SignUpFee)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SignUpFee)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DurationInMonth)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DurationInMonth)
+        </dd>
+    </dl>
+
+    <form method="post" asp-page-handler="DeleteConfirmed" asp-route-id="@Model.Id">
+        <div class="form-group">
+            <button type="submit" class="btn btn-danger">Yes, Delete</button>
+            <a asp-page="/MembershipTypes/Index" class="btn btn-secondary">No, Cancel</a>
+        </div>
+    </form>
+</div>

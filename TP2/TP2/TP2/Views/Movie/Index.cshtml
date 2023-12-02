@@ -1,0 +1,25 @@
+﻿@model List<Movie>
+
+<h2>List of Movies</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var movie in Model)
+        {
+            <tr>
+                <td>@movie.Id</td>
+                <td> @Html.ActionLink(movie.Name, "Details", new { id = movie.Id }) </td>
+            </tr>
+        }
+    </tbody>
+</table>

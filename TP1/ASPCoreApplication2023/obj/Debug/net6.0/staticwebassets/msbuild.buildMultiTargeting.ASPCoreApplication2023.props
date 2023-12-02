@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ASPCoreApplication2023.props" />
+</Project>

@@ -1,0 +1,33 @@
+﻿@model TP3.Models.MembershipType
+
+<h2>Create MembershipType</h2>
+
+<form asp-action="Create" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="SignUpFee" class="control-label"></label>
+        <input asp-for="SignUpFee" class="form-control" />
+        <span asp-validation-for="SignUpFee" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DurationInMonth" class="control-label"></label>
+        <input asp-for="DurationInMonth" class="form-control" />
+        <span asp-validation-for="DurationInMonth" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DiscountRate" class="control-label"></label>
+        <input asp-for="DiscountRate" class="form-control" />
+        <span asp-validation-for="DiscountRate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

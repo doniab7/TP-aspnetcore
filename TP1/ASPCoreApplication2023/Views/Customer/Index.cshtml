@@ -1,0 +1,13 @@
+﻿@model MovieCustomerViewModel
+
+<h2>Movie Details</h2>
+<h3>@Model.Movie.Name</h3>
+<h4>Release Date: @Model.Movie.ReleaseDate.ToShortDateString()</h4>
+
+<h2>Customer List</h2>
+<ul>
+    @foreach (var customer in Model.Customers)
+    {
+        <li>@customer.Name</li>
+    }
+</ul>
